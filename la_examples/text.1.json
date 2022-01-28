@@ -1,0 +1,31 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/text/1",
+  "type": "LinguisticObject",
+  "_label": "Example Article",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300048715",
+      "type": "Type",
+      "_label": "Article"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Title of Article"
+    },
+    {
+      "type": "Identifier",
+      "_label": "DOI of Article",
+      "content": "10.1000/1011"
+    }
+  ],
+  "language": [
+    {
+      "id": "http://vocab.getty.edu/aat/300388277",
+      "type": "Language",
+      "_label": "English"
+    }
+  ]
+}

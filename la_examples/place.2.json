@@ -1,0 +1,52 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/place/2",
+  "type": "Place",
+  "_label": "Los Angeles, CA",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300008389",
+      "type": "Type",
+      "_label": "City"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Name",
+      "content": "Los Angeles"
+    }
+  ],
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435416",
+          "type": "Type",
+          "_label": "Description",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ],
+      "content": "Los Angeles is a city in California, USA."
+    }
+  ],
+  "part_of": [
+    {
+      "type": "Place",
+      "_label": "California",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300000774",
+          "type": "Type",
+          "_label": "Province"
+        }
+      ]
+    }
+  ]
+}

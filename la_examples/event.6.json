@@ -1,0 +1,45 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/event/6",
+  "type": "Activity",
+  "_label": "Example Auction in London 1875-03-12,13",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300054751",
+      "type": "Type",
+      "_label": "Auction Event"
+    }
+  ],
+  "timespan": {
+    "type": "TimeSpan",
+    "_label": "12th and 13th of March, 1875",
+    "begin_of_the_begin": "1875-03-12T00:00:00Z",
+    "end_of_the_end": "1875-03-14T00:00:00Z"
+  },
+  "took_place_at": [
+    {
+      "type": "Place",
+      "_label": "Auction House Premises, London",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300005234",
+          "type": "Type",
+          "_label": "Auction House (place)"
+        }
+      ]
+    }
+  ],
+  "carried_out_by": [
+    {
+      "type": "Group",
+      "_label": "Auction House",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300417515",
+          "type": "Type",
+          "_label": "Auction House (organization)"
+        }
+      ]
+    }
+  ]
+}

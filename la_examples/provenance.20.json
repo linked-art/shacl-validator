@@ -1,0 +1,102 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/20",
+  "type": "Activity",
+  "_label": "Theft of Two Paintings",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "TransferOfCustody",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055292",
+          "type": "Type",
+          "_label": "Theft"
+        }
+      ],
+      "transferred_custody_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Stolen Painting",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300033618",
+              "type": "Type",
+              "_label": "Painting",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435443",
+                  "type": "Type",
+                  "_label": "Type of Work"
+                }
+              ]
+            },
+            {
+              "id": "http://vocab.getty.edu/aat/300133025",
+              "type": "Type",
+              "_label": "Artwork"
+            }
+          ]
+        }
+      ],
+      "transferred_custody_from": [
+        {
+          "type": "Person",
+          "_label": "Owner"
+        }
+      ],
+      "transferred_custody_to": [
+        {
+          "type": "Person",
+          "_label": "Thief"
+        }
+      ]
+    },
+    {
+      "type": "TransferOfCustody",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055292",
+          "type": "Type",
+          "_label": "Theft"
+        }
+      ],
+      "transferred_custody_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Stolen Painting 2",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300033618",
+              "type": "Type",
+              "_label": "Painting"
+            },
+            {
+              "id": "http://vocab.getty.edu/aat/300133025",
+              "type": "Type",
+              "_label": "Artwork"
+            }
+          ]
+        }
+      ],
+      "transferred_custody_from": [
+        {
+          "type": "Person",
+          "_label": "Owner"
+        }
+      ],
+      "transferred_custody_to": [
+        {
+          "type": "Person",
+          "_label": "Thief"
+        }
+      ]
+    }
+  ]
+}

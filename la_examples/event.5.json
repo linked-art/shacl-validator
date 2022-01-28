@@ -1,0 +1,52 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/event/5",
+  "type": "Activity",
+  "_label": "Example Travelling Exhibition at Two Museums",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300054773",
+      "type": "Type",
+      "_label": "Exhibiting in multiple locations"
+    }
+  ],
+  "timespan": {
+    "type": "TimeSpan",
+    "begin_of_the_begin": "1980-10-01",
+    "end_of_the_end": "1981-08-14"
+  },
+  "part": [
+    {
+      "type": "Activity",
+      "_label": "Exhibition at Museum 1",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054766",
+          "type": "Type",
+          "_label": "Exhibiting"
+        }
+      ],
+      "timespan": {
+        "type": "TimeSpan",
+        "begin_of_the_begin": "1980-10-01",
+        "end_of_the_end": "1981-03-01"
+      }
+    },
+    {
+      "type": "Activity",
+      "_label": "Exhibition at Museum 2",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054766",
+          "type": "Type",
+          "_label": "Exhibiting"
+        }
+      ],
+      "timespan": {
+        "type": "TimeSpan",
+        "begin_of_the_begin": "1981-03-14",
+        "end_of_the_end": "1981-08-14"
+      }
+    }
+  ]
+}

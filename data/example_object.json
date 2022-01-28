@@ -1,0 +1,213 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "t0",
+  "produced_by": {
+
+    "diminished": {
+        "id": "https://linked.art/testshacl/object/t0_diminished",
+        "type": "HumanMadeObject",
+        "_label": "Painting",
+        "classified_as": [
+          {
+            "id": "http://vocab.getty.edu/aat/300033618",
+            "type": "Type",
+            "_label": "Painting",
+            "classified_as": [
+              {
+                "id": "http://vocab.getty.edu/aat/300435443",
+                "type": "Type",
+                "_label": "Type of Work"
+              }
+            ]
+          }
+        ]
+    },
+
+    "technique": [
+      {
+        "id": "http://vocab.getty.edu/aat/300053932",
+        "type": "Type",
+        "_label": "Glassblowing"
+      }
+    ],
+
+    "used_specific_object": [{
+        "type": "HumanMadeObject",
+        "_label": "Negative of Photograph",
+        "classified_as": [
+          {
+            "id": "http://vocab.getty.edu/aat/300127173",
+            "type": "Type",
+            "_label": "Photographic Negative",
+            "classified_as": [
+              {
+                "id": "http://vocab.getty.edu/aat/300435443",
+                "type": "Type",
+                "_label": "Type of Work"
+              }
+            ]
+          }
+        ],
+        "shows": [
+          {
+            "type": "VisualItem",
+            "_label": "Visual Content of Photographs and Negative"
+          }
+        ]
+    }],
+
+    "influenced_by": [{
+        "type": "Person",
+        "_label": "Well Known Artist"
+    }],
+
+    "carried_out_by": [{
+        "type": "Person",
+        "_label": "Well Known Artist"
+    }],
+    "caused_by": [
+      {
+        "type": "Activity",
+        "_label": "Burning of the Painting",
+        "carried_out_by": [
+          {
+            "type": "Person",
+            "_label": "Painting Burner"
+          }
+        ]
+      }
+    ],
+    "_label" : "a label",
+    "type": "Production",
+    "timespan": {
+      "_label" : "a label",
+      "type": "TimeSpan",
+      "identified_by": [
+          {
+            "type": "Name",
+            "classified_as": [{
+                "id": "http://vocab.getty.edu/aat/300404669",
+                "type": "Type",
+                "_label": "Display Title"
+            }],
+            "content": "1503-1506"
+          },
+          {
+            "type": "Name",
+            "classified_as": [{
+                "id": "http://vocab.getty.edu/aat/300404670",
+                "type": "Type",
+                "_label": "Primary Name"
+            }],
+            "content": "This portrait was doubtless started in Florence around 1503. It is thought to be of Lisa Gherardini, wife of a Florentine cloth merchant ...",
+            "language": [{
+                "id": "http://vocab.getty.edu/aat/300388306",
+                "type": "Language",
+                "_label": "French"
+            }]
+          }
+      ],
+      "classified_as": [{
+        "id": "http://vocab.getty.edu/aat/300033618",
+        "type": "Type",
+        "_label": "Painting"
+      }],
+      "begin_of_the_begin": "1503-01-01T00:00:00Z",
+      "end_of_the_end": "1506-12-31T23:59:59Z"
+    },
+    "took_place_at": [{
+        "id": "http://vocab.getty.edu/tgn/7000457",
+        "type": "Place",
+        "_label": "Florence, Italy"
+    }],
+    "carried_out_by": [{
+        "id": "http://vocab.getty.edu/ulan/500010879",
+        "type": "Person",
+        "_label": "Leonardo da Vinci"
+    }],
+    "classified_as": [{
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting"
+    }],
+    "identified_by": [{
+        "type": "Name",
+        "classified_as": [{
+            "id": "http://vocab.getty.edu/aat/300404670",
+            "type": "Type",
+            "_label": "Primary Name"
+        }],
+        "content": "This portrait was doubtless started in Florence around 1503. It is thought to be of Lisa Gherardini, wife of a Florentine cloth merchant ...",
+        "language": [{
+            "id": "http://vocab.getty.edu/aat/300388306",
+            "type": "Language",
+            "_label": "French"
+        }]
+    }]
+  },
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Name",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404670",
+          "type": "Type",
+          "_label": "Primary Name"
+        },
+        {
+          "id": "http://vocab.getty.edu/aat/300435416",
+          "type": "Type",
+          "_label": "Description",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300418049",
+              "type": "Type",
+              "_label": "Brief Text"
+            }
+          ]
+        }
+      ],
+      "content": "This portrait was doubtless started in Florence around 1503. It is thought to be of Lisa Gherardini, wife of a Florentine cloth merchant ...",
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388306",
+          "type": "Language",
+          "_label": "French"
+        }
+      ]
+    },
+    {
+      "type": "Identifier",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300312355",
+          "type": "Type",
+          "_label": "Accession Number"
+        }
+      ],
+      "content": "INV. 779"
+    }
+  ]
+}
+

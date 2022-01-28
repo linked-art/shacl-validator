@@ -1,0 +1,34 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/32",
+  "type": "HumanMadeObject",
+  "_label": "Physical Book",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300028051",
+      "type": "Type",
+      "_label": "Book",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    }
+  ],
+  "carries": [
+    {
+      "type": "LinguisticObject",
+      "_label": "Textual content of the Book",
+      "content": "Once upon a time, ...",
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388277",
+          "type": "Language",
+          "_label": "English"
+        }
+      ]
+    }
+  ]
+}

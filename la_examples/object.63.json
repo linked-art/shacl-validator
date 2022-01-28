@@ -1,0 +1,49 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/63",
+  "type": "HumanMadeObject",
+  "_label": "Page of Manuscript",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300194222",
+      "type": "Type",
+      "_label": "Page",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    }
+  ],
+  "removed_by": [
+    {
+      "type": "PartRemoval",
+      "carried_out_by": [
+        {
+          "type": "Person",
+          "_label": "Unscrupulous Seller"
+        }
+      ],
+      "diminished": {
+        "type": "HumanMadeObject",
+        "_label": "Manuscript",
+        "classified_as": [
+          {
+            "id": "http://vocab.getty.edu/aat/300265483",
+            "type": "Type",
+            "_label": "Manuscript",
+            "classified_as": [
+              {
+                "id": "http://vocab.getty.edu/aat/300435443",
+                "type": "Type",
+                "_label": "Type of Work"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

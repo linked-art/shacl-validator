@@ -1,0 +1,27 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/5",
+  "type": "Activity",
+  "_label": "Gift of two Paintings to Museum",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300417637",
+      "type": "Type"
+    }
+  ],
+  "part": [
+    {
+      "type": "Acquisition",
+      "_label": "Acquisition of Painting 1"
+    },
+    {
+      "type": "Acquisition",
+      "_label": "Acquisition of Painting 2"
+    }
+  ]
+}

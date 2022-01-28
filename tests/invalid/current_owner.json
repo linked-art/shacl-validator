@@ -1,0 +1,19 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "v3,v4,v49,v50",
+  "current_owner": [
+    {
+      "id": "htatp://louvre.fr/",
+      "type": "Group",
+      "_label": "The Louvre"
+    },
+    {
+      "id": "http://example.com/materials/steel",
+      "type": "Material",
+      "_label": "Steel"
+    }
+  ]
+}

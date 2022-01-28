@@ -1,0 +1,28 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "v35,w14,w5,w22,v36,v37,v38",
+  "dimension": [
+    {
+      "type": "Person",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055644",
+          "type": "Type",
+          "_label": "Height"
+        }
+      ],
+      "value": 0.77,
+      "unit": {
+        "id": "http://vocab.getty.edu/aat/300379099",
+        "type": "MeasurementUnit",
+        "_label": "meters"
+      }
+    },
+    {
+      "type": "Dimension"
+    }
+  ]
+}

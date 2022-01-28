@@ -1,0 +1,10 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "note": "v1,w5,w14,w22,v37,v38",
+  "dimension": [{
+      "type": "Dimension",
+      "value": "I am not a number"
+  }]
+}

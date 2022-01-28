@@ -1,0 +1,12 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "v26,w5",
+  "representation": [
+    {
+      "type": "la:Set"
+    }
+  ]
+}

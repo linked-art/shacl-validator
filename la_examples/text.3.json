@@ -1,0 +1,37 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/text/3",
+  "type": "LinguisticObject",
+  "_label": "Example Monograph Text",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300060417",
+      "type": "Type",
+      "_label": "Monograph"
+    }
+  ],
+  "part": [
+    {
+      "type": "LinguisticObject",
+      "_label": "Chapter 1",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300311699",
+          "type": "Type",
+          "_label": "Chapter"
+        }
+      ]
+    },
+    {
+      "type": "LinguisticObject",
+      "_label": "Chapter 2",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300311699",
+          "type": "Type",
+          "_label": "Chapter"
+        }
+      ]
+    }
+  ]
+}

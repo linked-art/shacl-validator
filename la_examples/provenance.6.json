@@ -1,0 +1,39 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/6",
+  "type": "Activity",
+  "_label": "Undated Purchase of Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "starts_after_the_end_of": [
+    {
+      "type": "Activity",
+      "_label": "Previous Owner's Acquisition",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055863",
+          "type": "Type",
+          "_label": "Provenance Activity"
+        }
+      ]
+    }
+  ],
+  "ends_before_the_start_of": [
+    {
+      "type": "Activity",
+      "_label": "Subsequent Owner's Acquisition",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055863",
+          "type": "Type",
+          "_label": "Provenance Activity"
+        }
+      ]
+    }
+  ]
+}

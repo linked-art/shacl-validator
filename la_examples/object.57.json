@@ -1,0 +1,62 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/57",
+  "type": "HumanMadeObject",
+  "_label": "Painted Sculpture",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300047090",
+      "type": "Type",
+      "_label": "Sculpture",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "produced_by": {
+    "type": "Production",
+    "part": [
+      {
+        "type": "Production",
+        "technique": [
+          {
+            "id": "http://vocab.getty.edu/aat/300264383",
+            "type": "Type",
+            "_label": "Sculpting"
+          }
+        ],
+        "carried_out_by": [
+          {
+            "type": "Person",
+            "_label": "Sculptor"
+          }
+        ]
+      },
+      {
+        "type": "Production",
+        "technique": [
+          {
+            "id": "http://vocab.getty.edu/aat/300054216",
+            "type": "Type",
+            "_label": "Painting"
+          }
+        ],
+        "carried_out_by": [
+          {
+            "type": "Person",
+            "_label": "Painter"
+          }
+        ]
+      }
+    ]
+  }
+}

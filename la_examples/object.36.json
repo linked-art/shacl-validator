@@ -1,0 +1,44 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/36",
+  "type": "HumanMadeObject",
+  "_label": "Impressionist Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "shows": [
+    {
+      "type": "VisualItem",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300021503",
+          "type": "Type",
+          "_label": "Impressionism",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300015646",
+              "type": "Type",
+              "_label": "Style"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

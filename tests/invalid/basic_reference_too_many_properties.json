@@ -1,0 +1,18 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/refer_to_group",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "w25,w43,w27,w14,w42,v13,w43,v12,v2,v28",
+  "representation": [
+    {
+      "type": "VisualItem",
+      "id" : "https://external.ink/asdfasdf",
+      "_label" : "a label",
+      "member_of" : [{
+           "id":"https://example.com/set/1234",
+           "_label" : "a label"
+      }]
+    }
+  ]
+}

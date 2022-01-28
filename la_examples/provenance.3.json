@@ -1,0 +1,93 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/3",
+  "type": "Activity",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "Move",
+      "_label": "Move of object for exhibition",
+      "carried_out_by": [
+        {
+          "type": "Group",
+          "_label": "Exhibiting Museum",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300312281",
+              "type": "Type",
+              "_label": "Museum"
+            }
+          ]
+        }
+      ],
+      "moved": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Example Painting",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300033618",
+              "type": "Type",
+              "_label": "Painting",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435443",
+                  "type": "Type",
+                  "_label": "Type of Work"
+                }
+              ]
+            },
+            {
+              "id": "http://vocab.getty.edu/aat/300133025",
+              "type": "Type",
+              "_label": "Artwork"
+            }
+          ],
+          "current_owner": [
+            {
+              "type": "Group",
+              "_label": "Exhibiting Museum"
+            }
+          ]
+        }
+      ],
+      "specific_purpose": [
+        {
+          "type": "Activity",
+          "_label": "Example Exhibition",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300054766",
+              "type": "Type",
+              "_label": "Exhibiting"
+            }
+          ],
+          "carried_out_by": [
+            {
+              "type": "Group",
+              "_label": "Exhibiting Museum"
+            }
+          ],
+          "used_specific_object": [
+            {
+              "type": "Set",
+              "_label": "Set of Exhibited Objects",
+              "member": [
+                {
+                  "type": "HumanMadeObject",
+                  "_label": "Example Painting"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

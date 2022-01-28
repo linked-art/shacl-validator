@@ -1,0 +1,44 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/activity/1",
+  "type": "Activity",
+  "_label": "Example Exhibition",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300054766",
+      "type": "Type",
+      "_label": "Exhibiting"
+    }
+  ],
+  "timespan": {
+    "type": "TimeSpan",
+    "begin_of_the_begin": "2010-08-01",
+    "end_of_the_end": "2011-06-01"
+  },
+  "took_place_at": [
+    {
+      "type": "Place",
+      "_label": "Example Museum's Location",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300005768",
+          "type": "Type",
+          "_label": "Museum (place)"
+        }
+      ]
+    }
+  ],
+  "carried_out_by": [
+    {
+      "type": "Group",
+      "_label": "Example Museum",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300312281",
+          "type": "Type",
+          "_label": "Museum"
+        }
+      ]
+    }
+  ]
+}

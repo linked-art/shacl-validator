@@ -1,0 +1,12 @@
+#!/bin/bash
+
+LAV_HOME=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+LAV=lav-0.1.jar
+
+PLAT=`uname -s`
+if [[ ${PLAT} =~ CYG ]]; then
+    LAV_HOME=`cygpath -w ${LAV_HOME}/`
+    LAV_CONF=`cygpath -w ${LAV_HOME}/../conf/`
+fi
+
+java -Dlog4j.configuration=file:${LAV_CONF}log4j.properties -jar ${LAV_HOME}${LAV} $@

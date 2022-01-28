@@ -1,0 +1,24 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/place/1",
+  "type": "Place",
+  "_label": "Rome",
+  "part_of": [
+    {
+      "type": "Place",
+      "_label": "Roma",
+      "part_of": [
+        {
+          "type": "Place",
+          "_label": "Lazio",
+          "part_of": [
+            {
+              "type": "Place",
+              "_label": "Italy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

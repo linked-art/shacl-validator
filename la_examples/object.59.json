@@ -1,0 +1,56 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/59",
+  "type": "HumanMadeObject",
+  "_label": "Photograph",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300046300",
+      "type": "Type",
+      "_label": "Photograph",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    }
+  ],
+  "shows": [
+    {
+      "type": "VisualItem",
+      "_label": "Visual Content of Photographs and Negative"
+    }
+  ],
+  "produced_by": {
+    "type": "Production",
+    "_label": "Printing of Photograph",
+    "used_specific_object": [
+      {
+        "type": "HumanMadeObject",
+        "_label": "Negative of Photograph",
+        "classified_as": [
+          {
+            "id": "http://vocab.getty.edu/aat/300127173",
+            "type": "Type",
+            "_label": "Photographic Negative",
+            "classified_as": [
+              {
+                "id": "http://vocab.getty.edu/aat/300435443",
+                "type": "Type",
+                "_label": "Type of Work"
+              }
+            ]
+          }
+        ],
+        "shows": [
+          {
+            "type": "VisualItem",
+            "_label": "Visual Content of Photographs and Negative"
+          }
+        ]
+      }
+    ]
+  }
+}

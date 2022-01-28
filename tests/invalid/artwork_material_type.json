@@ -1,0 +1,38 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t46",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "w25,w42,w46",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/400435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/400033618",
+      "type": "Type",
+      "_label": "Sculpture",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/400133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ]
+}

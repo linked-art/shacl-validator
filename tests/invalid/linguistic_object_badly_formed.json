@@ -1,0 +1,13 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "w16,w17,w18,w19",
+  "referred_to_by": [
+    {
+      "type": "LinguisticObject",
+      "content": ""
+    }
+  ]
+}

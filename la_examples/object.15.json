@@ -1,0 +1,51 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/15",
+  "type": "HumanMadeObject",
+  "_label": "St. Sebastian",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "member_of": [
+    {
+      "type": "Set",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300025976",
+          "type": "Type",
+          "_label": "Collection"
+        },
+        {
+          "id": "http://vocab.getty.edu/aat/300411912",
+          "type": "Type",
+          "_label": "Public Collection"
+        }
+      ],
+      "created_by": {
+        "type": "Creation",
+        "carried_out_by": [
+          {
+            "type": "Group",
+            "_label": "Galleria Nazionale d'Arte Antica, Palazzo Corsini"
+          }
+        ]
+      }
+    }
+  ]
+}

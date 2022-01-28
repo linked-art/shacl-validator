@@ -1,0 +1,63 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/24",
+  "type": "Activity",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "Activity",
+      "_label": "Promise of Gift",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435599",
+          "type": "Type",
+          "_label": "Promise"
+        }
+      ],
+      "referred_to_by": [
+        {
+          "type": "LinguisticObject",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435416",
+              "type": "Type",
+              "_label": "Description",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300418049",
+                  "type": "Type",
+                  "_label": "Brief Text"
+                }
+              ]
+            }
+          ],
+          "content": "Contractual gift over time from Owner to be completed in 2032"
+        }
+      ],
+      "carried_out_by": [
+        {
+          "type": "Person",
+          "_label": "Owner"
+        }
+      ],
+      "used_specific_object": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Painting"
+        }
+      ],
+      "participant": [
+        {
+          "type": "Group",
+          "_label": "Museum"
+        }
+      ]
+    }
+  ]
+}

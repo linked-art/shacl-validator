@@ -1,0 +1,41 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/text/2",
+  "type": "LinguisticObject",
+  "_label": "Example Journal Article",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300048715",
+      "type": "Type",
+      "_label": "Article"
+    }
+  ],
+  "created_by": {
+    "type": "Creation",
+    "_label": "Creation of the Article Content",
+    "carried_out_by": [
+      {
+        "type": "Person",
+        "_label": "Author"
+      }
+    ]
+  },
+  "used_for": [
+    {
+      "type": "Activity",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054686",
+          "type": "Type",
+          "_label": "Publishing"
+        }
+      ],
+      "carried_out_by": [
+        {
+          "type": "Group",
+          "_label": "Publishing House"
+        }
+      ]
+    }
+  ]
+}

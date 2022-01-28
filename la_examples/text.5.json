@@ -1,0 +1,43 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/text/5",
+  "type": "LinguisticObject",
+  "_label": "Abstract of Example Article",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300026032",
+      "type": "Type",
+      "_label": "Abstract",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300418049",
+          "type": "Type",
+          "_label": "Brief Text"
+        }
+      ]
+    }
+  ],
+  "content": "This is the abstract of the example article, which is excellent.",
+  "refers_to": [
+    {
+      "type": "LinguisticObject",
+      "_label": "Example Article",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300048715",
+          "type": "Type",
+          "_label": "Article"
+        }
+      ]
+    }
+  ],
+  "created_by": {
+    "type": "Creation",
+    "carried_out_by": [
+      {
+        "type": "Person",
+        "_label": "Example Abstracter"
+      }
+    ]
+  }
+}

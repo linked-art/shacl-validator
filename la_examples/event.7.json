@@ -1,0 +1,50 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/event/7",
+  "type": "Activity",
+  "_label": "Auction of Lot J-1823-5",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300420001",
+      "type": "Type",
+      "_label": "Auction of Lot"
+    }
+  ],
+  "carried_out_by": [
+    {
+      "type": "Person",
+      "_label": "Example Auctioneer"
+    }
+  ],
+  "used_specific_object": [
+    {
+      "type": "Set",
+      "_label": "Set of Objects for Lot J-1823-5"
+    }
+  ],
+  "part_of": [
+    {
+      "type": "Activity",
+      "_label": "Example Auction"
+    }
+  ],
+  "caused": [
+    {
+      "type": "Activity",
+      "_label": "Sale of Lot J-1823-5",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055863",
+          "type": "Type",
+          "_label": "Provenance Activity"
+        }
+      ]
+    }
+  ],
+  "part": [
+    {
+      "type": "Activity",
+      "_label": "Bids on Lot J-1823-5"
+    }
+  ]
+}

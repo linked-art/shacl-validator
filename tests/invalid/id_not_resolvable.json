@@ -1,0 +1,6 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "http://yale.edu/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "note": "v6,w5,w25,w14,w43,w42"
+}

@@ -1,0 +1,39 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/11",
+  "type": "Activity",
+  "_label": "Purchase of Sculpture",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "Payment",
+      "paid_amount": {
+        "type": "MonetaryAmount",
+        "value": 1000,
+        "currency": {
+          "id": "http://vocab.getty.edu/aat/300411994",
+          "type": "Currency",
+          "_label": "US Dollars"
+        }
+      },
+      "paid_from": [
+        {
+          "type": "Person",
+          "_label": "Buyer"
+        }
+      ],
+      "paid_to": [
+        {
+          "type": "Person",
+          "_label": "Seller"
+        }
+      ]
+    }
+  ]
+}

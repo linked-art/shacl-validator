@@ -1,0 +1,12 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/refer_to_group",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "v20,w14,w25,w42,w43,v50",
+  "referred_to_by": [
+    {
+      "type": "Group"
+    }
+  ]
+}

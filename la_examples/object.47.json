@@ -1,0 +1,49 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/47",
+  "type": "HumanMadeObject",
+  "_label": "Green Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "dimension": [
+    {
+      "type": "Dimension",
+      "_label": "green",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300080438",
+          "type": "Type",
+          "_label": "Color"
+        },
+        {
+          "id": "http://vocab.getty.edu/aat/300128438",
+          "type": "Type",
+          "_label": "Green"
+        }
+      ],
+      "value": 65280,
+      "unit": {
+        "id": "http://vocab.getty.edu/aat/300266239",
+        "type": "MeasurementUnit",
+        "_label": "rgb"
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/person/15",
+  "type": "Person",
+  "_label": "E.G. Person",
+  "representation": [
+    {
+      "type": "VisualItem",
+      "digitally_shown_by": [
+        {
+          "type": "DigitalObject",
+          "_label": "Image of Person",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300215302",
+              "type": "Type",
+              "_label": "Digital Image"
+            }
+          ],
+          "format": "image/jpeg",
+          "access_point": [
+            {
+              "id": "http://example.org/egperson/image.jpg",
+              "type": "DigitalObject"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

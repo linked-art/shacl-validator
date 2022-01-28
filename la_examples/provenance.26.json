@@ -1,0 +1,61 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/26",
+  "type": "Activity",
+  "_label": "Delivery of Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "Acquisition",
+      "transferred_title_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Painting"
+        }
+      ],
+      "transferred_title_from": [
+        {
+          "type": "Person",
+          "_label": "Artist"
+        }
+      ],
+      "transferred_title_to": [
+        {
+          "type": "Person",
+          "_label": "Commissioner"
+        }
+      ]
+    },
+    {
+      "type": "Payment",
+      "_label": "Payment",
+      "paid_amount": {
+        "type": "MonetaryAmount",
+        "value": 900,
+        "currency": {
+          "id": "http://vocab.getty.edu/aat/300411994",
+          "type": "Currency",
+          "_label": "US Dollars"
+        }
+      },
+      "paid_from": [
+        {
+          "type": "Person",
+          "_label": "Commissioner"
+        }
+      ],
+      "paid_to": [
+        {
+          "type": "Person",
+          "_label": "Artist"
+        }
+      ]
+    }
+  ]
+}

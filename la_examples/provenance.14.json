@@ -1,0 +1,43 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/14",
+  "type": "Activity",
+  "_label": "Return to Owner from Auction House",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "TransferOfCustody",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300438467",
+          "type": "Type",
+          "_label": "Return of Loan"
+        }
+      ],
+      "transferred_custody_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Painting"
+        }
+      ],
+      "transferred_custody_from": [
+        {
+          "type": "Group",
+          "_label": "Auction House"
+        }
+      ],
+      "transferred_custody_to": [
+        {
+          "type": "Person",
+          "_label": "Owner"
+        }
+      ]
+    }
+  ]
+}

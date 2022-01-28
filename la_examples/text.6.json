@@ -1,0 +1,38 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/text/6",
+  "type": "LinguisticObject",
+  "_label": "Article about Example Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300048715",
+      "type": "Type",
+      "_label": "Article"
+    }
+  ],
+  "refers_to": [
+    {
+      "type": "HumanMadeObject",
+      "_label": "Example Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300033618",
+          "type": "Type",
+          "_label": "Painting",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435443",
+              "type": "Type",
+              "_label": "Type of Work"
+            }
+          ]
+        },
+        {
+          "id": "http://vocab.getty.edu/aat/300133025",
+          "type": "Type",
+          "_label": "Artwork"
+        }
+      ]
+    }
+  ]
+}

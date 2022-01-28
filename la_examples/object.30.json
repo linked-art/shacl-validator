@@ -1,0 +1,66 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/30",
+  "type": "HumanMadeObject",
+  "_label": "Sculpture",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300047090",
+      "type": "Type",
+      "_label": "Sculpture",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "shows": [
+    {
+      "type": "VisualItem",
+      "_label": "Visual content shown by sculpture",
+      "digitally_shown_by": [
+        {
+          "type": "DigitalObject",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300215302",
+              "type": "Type",
+              "_label": "Digital Image"
+            }
+          ],
+          "access_point": [
+            {
+              "id": "http://example.org/iiif/img/full/max/0/default.jpg",
+              "type": "DigitalObject"
+            }
+          ],
+          "digitally_available_via": [
+            {
+              "type": "DigitalService",
+              "access_point": [
+                {
+                  "id": "http://example.org/iiif/img",
+                  "type": "DigitalObject"
+                }
+              ],
+              "conforms_to": [
+                {
+                  "id": "http://iiif.io/api/image",
+                  "type": "InformationObject"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

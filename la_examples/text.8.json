@@ -1,0 +1,70 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/text/8",
+  "type": "LinguisticObject",
+  "_label": "Auction Catalog of Example Auction",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300026068",
+      "type": "Type",
+      "_label": "Auction Catalog",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    }
+  ],
+  "refers_to": [
+    {
+      "type": "Activity",
+      "_label": "Example Auction, 1924",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054751",
+          "type": "Type",
+          "_label": "Auction Event"
+        }
+      ]
+    }
+  ],
+  "part": [
+    {
+      "type": "LinguisticObject",
+      "_label": "Entry for Lot 812",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300417223",
+          "type": "Type",
+          "_label": "Paragraph"
+        }
+      ],
+      "refers_to": [
+        {
+          "type": "Activity",
+          "_label": "Auction of Lot 812",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300420001",
+              "type": "Type",
+              "_label": "Auction of Lot"
+            }
+          ]
+        },
+        {
+          "type": "Set",
+          "_label": "Lot 812",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300411307",
+              "type": "Type",
+              "_label": "Auction Lot"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

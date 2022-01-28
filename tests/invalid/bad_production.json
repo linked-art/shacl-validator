@@ -1,0 +1,60 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "w23,w5,v30,w14,w25,v55,v56,v57,v62,v63",
+  "produced_by": {
+    "type": "Production",
+    "caused_by" : [{
+        "type" : "Person"
+    }],
+    "technique" : {
+        "id": "http://vocab.getty.edu/aat/600404669",
+        "type": "Event",
+        "_label": "Display Title"
+    },
+    "part" : {
+        "id": "http://vocab.getty.edu/aat/700404669",
+        "type": "Type",
+        "_label": "Display Title"
+    },
+    "diminished" : {
+        "id": "http://vocab.getty.edu/aat/800404669",
+        "type": "Type",
+        "_label": "Display Title"
+    },
+    "timespan": {
+      "type": "TimeSpan",
+      "identified_by": [
+        {
+          "type": "Name",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/900404669",
+              "type": "Type",
+              "_label": "Display Title"
+            }
+          ],
+          "content": "1503-1506"
+        }
+      ],
+      "begin_of_the_begin": "1503-01-01T00:00:00Z",
+      "end_of_the_end": "This is not a date"
+    },
+    "took_place_at": [
+      {
+        "id": "http://vocab.getty.edu/tgn/7000457",
+        "type": "Place",
+        "_label": "Florence, Italy"
+      }
+    ],
+    "carried_out_by": [
+      {
+        "id": "http://vocab.getty.edu/ulan/500010879",
+        "type": "Person",
+        "_label": "Leonardo da Vinci"
+      }
+    ]
+  }
+}

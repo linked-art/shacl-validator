@@ -1,0 +1,1053 @@
+@prefix archaeo: <http://www.cidoc-crm.org/cidoc-crm/CRMarchaeo/> .
+@prefix crm:     <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dig:     <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix geo:     <http://www.ics.forth.gr/isl/CRMgeo/> .
+@prefix la:      <https://linked.art/ns/terms/> .
+@prefix ore:     <http://www.openarchives.org/ore/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix sci:     <http://www.ics.forth.gr/isl/CRMsci/> .
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+la:StringOrLangString
+    sh:or (
+        [ sh:datatype xsd:string ]
+        [ sh:datatype rdf:langString ]
+    );
+.
+
+crm:E55_Type_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E55_Type ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E36_Visual_Item ;
+                       sh:path   crm:P199i_has_instance_represented_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:path   skos:broader
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E32_Authority_Document ;
+                       sh:path   skos:topConceptOf
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E55_Type ;
+                       sh:path   skos:narrower
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:path   skos:inScheme
+                     ] .
+
+la:Payment_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass la:Payment  ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   la:paid_to
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   la:paid_from
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E97_Monetary_Amount ;
+                       sh:path   la:paid_amount
+                     ] .
+
+dig:D1_Digital_Object_shape rdf:type     sh:NodeShape ;
+	sh:targetClass dig:D1_Digital_Object ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E90_Symbolic_Object ;
+                       sh:path   la:digitally_carries
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:DigitalService ;
+                       sh:path   la:digitally_available_via
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:DigitalService ;
+                       sh:path   la:digitally_makes_available
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  dig:D1_Digital_Object ;
+                       sh:path   la:access_point
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E36_Visual_Item ;
+                       sh:path   la:digitally_shows
+                     ] .
+
+crm:E19_Physical_Object_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E19_Physical_Object ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:path   crm:P56_bears_feature
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   la:current_permanent_custodian
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E9_Move ;
+                       sh:path   crm:P25i_moved_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P55_has_current_location
+                     ] .
+
+crm:E12_Production_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E12_Production ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E24_Physical_Human-Made_Thing ;
+                       sh:path   crm:P108_has_produced
+                     ] .
+
+crm:E90_Symbolic_Object_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E90_Symbolic_Object ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  dig:D1_Digital_Object ;
+                       sh:path   la:digitally_carried_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P128i_is_carried_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E90_Symbolic_Object ;
+                       sh:path   crm:P106_is_composed_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E90_Symbolic_Object ;
+                       sh:path   crm:P106i_forms_part_of
+                     ] ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:string ;
+                       sh:path      crm:P190_has_symbolic_content
+                     ] .
+
+crm:E80_Part_Removal_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E80_Part_Removal ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E24_Physical_Human-Made_Thing ;
+                       sh:path   crm:P112_diminished
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P113_removed
+                     ] .
+
+crm:E77_Persistent_Item_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E77_Persistent_Item ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E5_Event ;
+                       sh:path   crm:P12i_was_present_at
+                     ] .
+
+crm:E56_Language_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E56_Language ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E33_Linguistic_Object ;
+                       sh:path   crm:P72i_is_language_of
+                     ] .
+
+crm:E7_Activity_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E7_Activity ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E7_Activity ;
+                       sh:path   crm:P134i_was_continued_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P14_carried_out_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P17_was_motivated_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E55_Type ;
+                       sh:path   crm:P32_used_general_technique
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E7_Activity ;
+                       sh:path   crm:P134_continued
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E55_Type ;
+                       sh:path   crm:P21_had_general_purpose
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E5_Event ;
+                       sh:path   crm:P20_had_specific_purpose
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E70_Thing ;
+                       sh:path   crm:P16_used_specific_object
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P15_was_influenced_by
+                     ] .
+
+crm:E73_Information_Object_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E73_Information_Object ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:string ;
+                       sh:path      dc:format
+                     ] .
+
+la:Addition_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass la:Addition ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   la:added_member
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:Set ;
+                       sh:path   la:added_to
+                     ] .
+
+crm:E32_Authority_Document_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E32_Authority_Document ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E55_Type ;
+                       sh:path   skos:hasTopConcept
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P71_lists
+                     ] .
+
+crm:E4_Period_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E4_Period ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E4_Period ;
+                       sh:path   crm:P9i_forms_part_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E4_Period ;
+                       sh:path   crm:P9_consists_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P7_took_place_at
+                     ] .
+
+crm:E72_Legal_Object_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E72_Legal_Object ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E30_Right ;
+                       sh:path   crm:P104_is_subject_to
+                     ] .
+
+crm:E81_Transformation_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E81_Transformation ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P123_resulted_in
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P124_transformed
+                     ] .
+
+crm:E11_Modification_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E11_Modification ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E24_Physical_Human-Made_Thing ;
+                       sh:path   crm:P31_has_modified
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E57_Material ;
+                       sh:path   crm:P126_employed
+                     ] .
+
+crm:E67_Birth_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E67_Birth ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E21_Person ;
+                       sh:path   crm:P98_brought_into_life
+                     ] .
+
+crm:E36_Visual_Item_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E36_Visual_Item ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  dig:D1_Digital_Object ;
+                       sh:path   la:digitally_shown_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E55_Type ;
+                       sh:path   crm:P199_represents_instance_of_type
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E24_Physical_Human-Made_Thing ;
+                       sh:path   crm:P65i_is_shown_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P138_represents
+                     ] .
+
+crm:E33_Linguistic_Object_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E33_Linguistic_Object ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E33_Linguistic_Object ;
+                       sh:path   crm:P73_has_translation
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E56_Language ;
+                       sh:path   crm:P72_has_language
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E33_Linguistic_Object ;
+                       sh:path   crm:P73i_is_translation_of
+                     ] .
+
+crm:E21_Person_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E21_Person ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E69_Death ;
+                       sh:path   crm:P100i_died_in
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E67_Birth ;
+                       sh:path   crm:P98i_was_born
+                     ] .
+
+crm:E18_Physical_Thing_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E18_Physical_Thing ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E80_Part_Removal ;
+                       sh:path   crm:P113i_was_removed_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P156_occupies
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P50_has_current_keeper
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P198_holds_or_supports
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E6_Destruction ;
+                       sh:path   crm:P13i_was_destroyed_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E10_Transfer_of_Custody ;
+                       sh:path   crm:P30i_custody_transferred_through
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E57_Material ;
+                       sh:path   crm:P45_consists_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P46i_forms_part_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P198i_is_held_or_supported_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E79_Part_Addition ;
+                       sh:path   crm:P111i_was_added_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E8_Acquisition ;
+                       sh:path   crm:P24i_changed_ownership_through
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E81_Transformation ;
+                       sh:path   crm:P123i_resulted_from
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P46_is_composed_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P52_has_current_owner
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E90_Symbolic_Object ;
+                       sh:path   crm:P128_carries
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  sci:S19_Encounter_Event ;
+                       sh:path   sci:O19i_was_object_encountered_at
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E81_Transformation ;
+                       sh:path   crm:P124i_was_transformed_by
+                     ] .
+
+crm:E74_Group_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E74_Group ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E66_Formation ;
+                       sh:path   crm:P95i_was_formed_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E85_Joining ;
+                       sh:path   crm:P144i_gained_member_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P107_has_current_or_former_member
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E86_Leaving ;
+                       sh:path   crm:P146i_lost_member_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E68_Dissolution ;
+                       sh:path   crm:P99i_was_dissolved_by
+                     ] .
+
+crm:E9_Move_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E9_Move ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P26_moved_to
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E19_Physical_Object ;
+                       sh:path   crm:P25_moved
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P27_moved_from
+                     ] .
+
+crm:E52_Time-Span_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E52_Time-Span ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E54_Dimension ;
+                       sh:path   crm:P191_had_duration
+                     ] ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:dateTime ;
+                       sh:path      crm:P81a_end_of_the_begin
+                     ] ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:dateTime ;
+                       sh:path      crm:P81b_begin_of_the_end
+                     ] ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:dateTime ;
+                       sh:path      crm:P82a_begin_of_the_begin
+                     ] ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:dateTime ;
+                       sh:path      crm:P82b_end_of_the_end
+                     ] .
+
+crm:E68_Dissolution_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E68_Dissolution ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E74_Group ;
+                       sh:path   crm:P99_dissolved
+                     ] .
+
+crm:E41_Appellation_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E41_Appellation ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P76i_provides_access_to
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P1i_identifies
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E41_Appellation ;
+                       sh:path   crm:P139_has_alternative_form
+                     ] .
+
+la:RightAcquisition_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass la:RightAcquisition ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E30_Right ;
+                       sh:path   la:invalidates
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E30_Right ;
+                       sh:path   la:establishes
+                     ] .
+
+crm:E13_Attribute_Assignment_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E13_Attribute_Assignment ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E55_Type ;
+                       sh:path   la:property_classified_as
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P141_assigned
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P140_assigned_attribute_to
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E55_Type ;
+                       sh:path   crm:P177_assigned_property_of_type
+                     ] .
+
+crm:E10_Transfer_of_Custody_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E10_Transfer_of_Custody ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P30_transferred_custody_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P29_custody_received_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P28_custody_surrendered_by
+                     ] .
+
+crm:E79_Part_Addition_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E79_Part_Addition ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P111_added
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E24_Physical_Human-Made_Thing ;
+                       sh:path   crm:P110_augmented
+                     ] .
+
+crm:E54_Dimension_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E54_Dimension ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E58_Measurement_Unit ;
+                       sh:path   crm:P91_has_unit
+                     ] ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:double;
+                       sh:path      crm:P90a_has_lower_value_limit
+                     ] ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:double;
+                       sh:path      crm:P90_has_value
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E70_Thing ;
+                       sh:path   crm:P43i_is_dimension_of
+                     ] ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:double;
+                       sh:path      crm:P90b_has_upper_value_limit
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E52_Time-Span ;
+                       sh:path   crm:P191i_was_duration_of
+                     ] .
+
+crm:E98_Currency_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E98_Currency ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E97_Monetary_Amount ;
+                       sh:path   crm:P180i_was_currency_of
+                     ] .
+
+crm:E85_Joining_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E85_Joining ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P143_joined
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E74_Group ;
+                       sh:path   crm:P144_joined_with
+                     ] .
+
+la:Set_shape  rdf:type     sh:NodeShape ;
+	sh:targetClass la:Set ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   la:has_member
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:Addition ;
+                       sh:path   la:added_to_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:Removal ;
+                       sh:path   la:removed_from_by
+                     ] .
+
+crm:E57_Material_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E57_Material ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P45i_is_incorporated_in
+                     ] .
+
+crm:E69_Death_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E69_Death ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E21_Person ;
+                       sh:path   crm:P100_was_death_of
+                     ] .
+
+crm:E39_Actor_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E39_Actor ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E5_Event ;
+                       sh:path   crm:P11i_participated_in
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P50i_is_current_keeper_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E74_Group ;
+                       sh:path   crm:P107i_is_current_or_former_member_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E8_Acquisition ;
+                       sh:path   crm:P22i_acquired_title_through
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E7_Activity ;
+                       sh:path   crm:P14i_performed
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E86_Leaving ;
+                       sh:path   crm:P145i_left_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E30_Right ;
+                       sh:path   crm:P75_possesses
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E41_Appellation ;
+                       sh:path   crm:P76_has_contact_point
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E8_Acquisition ;
+                       sh:path   crm:P23i_surrendered_title_through
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P52i_is_current_owner_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P74_has_current_or_former_residence
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E10_Transfer_of_Custody ;
+                       sh:path   crm:P29i_received_custody_through
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E19_Physical_Object ;
+                       sh:path   la:current_permanent_custodian_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E10_Transfer_of_Custody ;
+                       sh:path   crm:P28i_surrendered_custody_through
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E85_Joining ;
+                       sh:path   crm:P143i_was_joined_by
+                     ] .
+
+crm:E2_Temporal_Entity_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E2_Temporal_Entity ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P183i_starts_after_the_end_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P183_ends_before_the_start_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P175i_starts_with_or_after_the_start_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P184_ends_before_or_with_the_end_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P185i_ends_after_the_end_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P176_starts_before_the_start_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P174i_ends_after_the_start_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P175_starts_before_or_with_the_start_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P176i_starts_after_the_start_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E52_Time-Span ;
+                       sh:path   crm:P4_has_time-span
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P182i_starts_after_or_with_the_end_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P174_starts_before_the_end_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P182_ends_before_or_with_the_start_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P185_ends_before_the_end_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P184i_ends_with_or_after_the_end_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   archaeo:AP25_occurs_during
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P173i_ends_after_or_with_the_start_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E2_Temporal_Entity ;
+                       sh:path   crm:P173_starts_before_or_with_the_end_of
+                     ] .
+
+crm:E1_CRM_Entity_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E1_CRM_Entity ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   la:equivalent
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:Addition ;
+                       sh:path   la:added_member_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E55_Type ;
+                       sh:path   crm:P2_has_type
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E7_Activity ;
+                       sh:path   crm:P15i_influenced
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E36_Visual_Item ;
+                       sh:path   crm:P138i_has_representation
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E41_Appellation ;
+                       sh:path   crm:P1_is_identified_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E24_Physical_Human-Made_Thing ;
+                       sh:path   crm:P62i_is_depicted_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E13_Attribute_Assignment ;
+                       sh:path   crm:P140i_was_attributed_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E32_Authority_Document ;
+                       sh:path   crm:P71i_is_listed_in
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   skos:exactMatch
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E13_Attribute_Assignment ;
+                       sh:path   crm:P141i_was_assigned_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:path   rdfs:seeAlso
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:Set ;
+                       sh:path   la:member_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E7_Activity ;
+                       sh:path   crm:P17i_motivated
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E89_Propositional_Object ;
+                       sh:path   crm:P129i_is_subject_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:Removal ;
+                       sh:path   la:removed_member_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   skos:closeMatch
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E89_Propositional_Object ;
+                       sh:path   crm:P67i_is_referred_to_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:path   rdfs:label ;
+                       sh:or  	 ( la:StringOrLangString );
+		               sh:message "E1::label - rdfs:label property must be an xsd:string or rdf:langString" ;
+                     ] .
+
+crm:E6_Destruction_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E6_Destruction  ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P13_destroyed
+                     ] .
+
+crm:E66_Formation_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E66_Formation  ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E74_Group ;
+                       sh:path   crm:P95_has_formed
+                     ] .
+
+crm:E71_Human-Made_Thing_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E71_Human-Made_Thing ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E73_Information_Object ;
+                       sh:path   dcterms:conformsTo
+                     ] .
+
+crm:E65_Creation_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E65_Creation ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E28_Conceptual_Object ;
+                       sh:path   crm:P94_has_created
+                     ] .
+
+crm:E97_Monetary_Amount_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E97_Monetary_Amount ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E98_Currency ;
+                       sh:path   crm:P180_has_currency
+                     ] .
+
+la:Removal_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass la:Removal ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:Set ;
+                       sh:path   la:removed_from
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   la:removed_member
+                     ] .
+
+crm:E86_Leaving_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E86_Leaving ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E74_Group ;
+                       sh:path   crm:P146_separated_from
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P145_separated
+                     ] .
+
+crm:E70_Thing_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E70_Thing ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E54_Dimension ;
+                       sh:path   crm:P43_has_dimension
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E7_Activity ;
+                       sh:path   crm:P16i_was_used_for
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E55_Type ;
+                       sh:path   crm:P101_had_as_general_use
+                     ] .
+
+crm:E28_Conceptual_Object_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E28_Conceptual_Object ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E65_Creation ;
+                       sh:path   crm:P94i_was_created_by
+                     ] .
+
+sci:S19_Encounter_Event_shape rdf:type     sh:NodeShape ;
+	sh:targetClass sci:S19_Encounter_Event ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   sci:O19_encountered_object
+                     ] .
+
+crm:E89_Propositional_Object_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E89_Propositional_Object ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E89_Propositional_Object ;
+                       sh:path   crm:P148_has_component
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P67_refers_to
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P129_is_about
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E89_Propositional_Object ;
+                       sh:path   crm:P148i_is_component_of
+                     ] .
+
+crm:E24_Physical_Human-Made_Thing_shape rdf:type     sh:NodeShape ;
+	sh:targetClass crm:E24_Physical_Human-Made_Thing ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E11_Modification ;
+                       sh:path   crm:P31i_was_modified_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E1_CRM_Entity ;
+                       sh:path   crm:P62_depicts
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E12_Production ;
+                       sh:path   crm:P108i_was_produced_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E79_Part_Addition ;
+                       sh:path   crm:P110i_was_augmented_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E36_Visual_Item ;
+                       sh:path   crm:P65_shows_visual_item
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E80_Part_Removal ;
+                       sh:path   crm:P112i_was_diminished_by
+                     ] .
+
+crm:E8_Acquisition_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E8_Acquisition ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P24_transferred_title_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P23_transferred_title_from
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P22_transferred_title_to
+                     ] .
+
+crm:E30_Right_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E30_Right ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:RightAcquisition ;
+                       sh:path   la:established_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E72_Legal_Object ;
+                       sh:path   crm:P104i_applies_to
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  la:RightAcquisition ;
+                       sh:path   la:invalidated_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P75i_is_possessed_by
+                     ] .
+
+crm:E5_Event_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E5_Event ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E77_Persistent_Item ;
+                       sh:path   crm:P12_occurred_in_the_presence_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E7_Activity ;
+                       sh:path   crm:P20i_was_purpose_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P11_had_participant
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E5_Event ;
+                       sh:path   sci:O13i_is_triggered_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E5_Event ;
+                       sh:path   sci:O13_triggers
+                     ] .
+
+crm:E53_Place_shape  rdf:type  sh:NodeShape ;
+	sh:targetClass crm:E53_Place ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E19_Physical_Object ;
+                       sh:path   crm:P55i_currently_holds
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E9_Move ;
+                       sh:path   crm:P26i_was_destination_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P89i_contains
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P89_falls_within
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E39_Actor ;
+                       sh:path   crm:P74i_is_current_or_former_residence_of
+                     ] ;
+        sh:property  [ rdf:type     sh:PropertyShape ;
+                       sh:datatype  xsd:string ;
+                       sh:path      crm:P168_place_is_defined_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P189i_is_approximated_by
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E9_Move ;
+                       sh:path   crm:P27i_was_origin_of
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E53_Place ;
+                       sh:path   crm:P189_approximates
+                     ] ;
+        sh:property  [ rdf:type  sh:PropertyShape ;
+                       sh:class  crm:E18_Physical_Thing ;
+                       sh:path   crm:P156i_is_occupied_by
+                     ] .
+

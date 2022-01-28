@@ -1,0 +1,15 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0/production_independent",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "w42,w43,w25,w14,w31,w32,w5,w23",
+  "produced_by": {
+    "type": "Production",
+    "timespan": {
+      "type": "TimeSpan",
+      "end_of_the_begin": "1500-01-01T00:00:00Z",
+      "begin_of_the_end": "1503-01-01T00:00:00Z"
+    }
+  }
+}

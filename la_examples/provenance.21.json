@@ -1,0 +1,95 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/21",
+  "type": "Activity",
+  "_label": "Unknowing Purchase of Stolen Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "TransferOfCustody",
+      "_label": "Obtaining Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/xxx",
+          "type": "Type",
+          "_label": "Sale of Stolen Goods"
+        }
+      ],
+      "transferred_custody_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Stolen Painting",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300033618",
+              "type": "Type",
+              "_label": "Painting",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435443",
+                  "type": "Type",
+                  "_label": "Type of Work"
+                }
+              ]
+            },
+            {
+              "id": "http://vocab.getty.edu/aat/300133025",
+              "type": "Type",
+              "_label": "Artwork"
+            }
+          ]
+        }
+      ],
+      "transferred_custody_from": [
+        {
+          "type": "Person",
+          "_label": "Thief"
+        }
+      ],
+      "transferred_custody_to": [
+        {
+          "type": "Group",
+          "_label": "Museum",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300312281",
+              "type": "Type",
+              "_label": "Museum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Payment",
+      "paid_amount": {
+        "type": "MonetaryAmount",
+        "_label": "Payment to Thief",
+        "value": 10000,
+        "currency": {
+          "id": "http://vocab.getty.edu/aat/300411998",
+          "type": "Currency",
+          "_label": "British Pounds"
+        }
+      },
+      "paid_from": [
+        {
+          "type": "Group",
+          "_label": "Museum"
+        }
+      ],
+      "paid_to": [
+        {
+          "type": "Person",
+          "_label": "Thief"
+        }
+      ]
+    }
+  ]
+}

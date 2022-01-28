@@ -1,0 +1,62 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/9",
+  "type": "Activity",
+  "_label": "Purchase of Sculpture",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "Acquisition",
+      "_label": "Acquisition of Sculpture from Seller",
+      "carried_out_by": [
+        {
+          "type": "Person",
+          "_label": "Agent for the Buyer"
+        }
+      ],
+      "transferred_title_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Sculpture",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300047090",
+              "type": "Type",
+              "_label": "Sculpture",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435443",
+                  "type": "Type",
+                  "_label": "Type of Work"
+                }
+              ]
+            },
+            {
+              "id": "http://vocab.getty.edu/aat/300133025",
+              "type": "Type",
+              "_label": "Artwork"
+            }
+          ]
+        }
+      ],
+      "transferred_title_from": [
+        {
+          "type": "Person",
+          "_label": "Seller"
+        }
+      ],
+      "transferred_title_to": [
+        {
+          "type": "Person",
+          "_label": "Buyer"
+        }
+      ]
+    }
+  ]
+}

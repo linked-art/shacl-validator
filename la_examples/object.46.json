@@ -1,0 +1,55 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/46",
+  "type": "HumanMadeObject",
+  "_label": "Example Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "dimension": [
+    {
+      "type": "Dimension",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055644",
+          "type": "Type",
+          "_label": "Height"
+        }
+      ],
+      "value": 20,
+      "unit": {
+        "id": "http://vocab.getty.edu/aat/300379100",
+        "type": "MeasurementUnit",
+        "_label": "inches"
+      },
+      "assigned_by": [
+        {
+          "type": "AttributeAssignment",
+          "_label": "Measurement of Painting",
+          "carried_out_by": [
+            {
+              "type": "Person",
+              "_label": "Curator"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

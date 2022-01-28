@@ -1,0 +1,40 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/text/7",
+  "type": "LinguisticObject",
+  "_label": "The Birth of Artistic Conception in China",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300048715",
+      "type": "Type",
+      "_label": "Article"
+    }
+  ],
+  "language": [
+    {
+      "id": "http://vocab.getty.edu/aat/300388277",
+      "type": "Language",
+      "_label": "English"
+    }
+  ],
+  "translation_of": [
+    {
+      "type": "LinguisticObject",
+      "_label": "Zhongguo yishu yijing zhi dansheng",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300048715",
+          "type": "Type",
+          "_label": "Article"
+        }
+      ],
+      "language": [
+        {
+          "id": "http://vocab.getty.edu/aat/300388113",
+          "type": "Language",
+          "_label": "Chinese"
+        }
+      ]
+    }
+  ]
+}

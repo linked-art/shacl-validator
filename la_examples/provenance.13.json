@@ -1,0 +1,68 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/13",
+  "type": "Activity",
+  "_label": "Purchase via Lot 812",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "used_specific_object": [
+    {
+      "type": "Set",
+      "_label": "Set of Objects for Lot 812"
+    }
+  ],
+  "part": [
+    {
+      "type": "Acquisition",
+      "_label": "Acquisition of Painting via Lot 812",
+      "transferred_title_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Example Painting"
+        }
+      ],
+      "transferred_title_from": [
+        {
+          "type": "Person",
+          "_label": "Seller"
+        }
+      ],
+      "transferred_title_to": [
+        {
+          "type": "Person",
+          "_label": "Buyer"
+        }
+      ]
+    },
+    {
+      "type": "Payment",
+      "_label": "Payment for Lot 812",
+      "paid_amount": {
+        "type": "MonetaryAmount",
+        "value": 4500,
+        "currency": {
+          "id": "http://vocab.getty.edu/aat/300411994",
+          "type": "Currency",
+          "_label": "US Dollars"
+        }
+      },
+      "paid_from": [
+        {
+          "type": "Person",
+          "_label": "Buyer"
+        }
+      ],
+      "paid_to": [
+        {
+          "type": "Person",
+          "_label": "Seller"
+        }
+      ]
+    }
+  ]
+}

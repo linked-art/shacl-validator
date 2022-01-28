@@ -1,0 +1,36 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/set/6",
+  "type": "Set",
+  "_label": "Set of Objects for Lot 812",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300411307",
+      "type": "Type",
+      "_label": "Auction Lot"
+    }
+  ],
+  "identified_by": [
+    {
+      "type": "Identifier",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300404628",
+          "type": "Type",
+          "_label": "Lot Number"
+        }
+      ],
+      "content": "812"
+    },
+    {
+      "type": "Name",
+      "content": "One Example Painting"
+    }
+  ],
+  "member": [
+    {
+      "type": "HumanMadeObject",
+      "_label": "Example Painting"
+    }
+  ]
+}

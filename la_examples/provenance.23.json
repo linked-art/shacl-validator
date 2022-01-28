@@ -1,0 +1,72 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/23",
+  "type": "Activity",
+  "_label": "Exhibiting a Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "motivated_by": [
+    {
+      "type": "Activity",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300054766",
+          "type": "Type",
+          "_label": "Exhibiting"
+        }
+      ]
+    }
+  ],
+  "part": [
+    {
+      "type": "Move",
+      "moved": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Example Painting",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300033618",
+              "type": "Type",
+              "_label": "Painting",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435443",
+                  "type": "Type",
+                  "_label": "Type of Work"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "moved_from": {
+        "type": "Place",
+        "_label": "Storage Venue",
+        "classified_as": [
+          {
+            "id": "http://vocab.getty.edu/aat/300150151",
+            "type": "Type",
+            "_label": "Storage (place)"
+          }
+        ]
+      },
+      "moved_to": {
+        "type": "Place",
+        "_label": "Gallery",
+        "classified_as": [
+          {
+            "id": "http://vocab.getty.edu/aat/300240057",
+            "type": "Type",
+            "_label": "Gallery (place)"
+          }
+        ]
+      }
+    }
+  ]
+}

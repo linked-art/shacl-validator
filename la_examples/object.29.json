@@ -1,0 +1,45 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/29",
+  "type": "HumanMadeObject",
+  "_label": "Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "referred_to_by": [
+    {
+      "type": "DigitalObject",
+      "_label": "Webpage that discusses Painting, but is not its homepage",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300264578",
+          "type": "Type",
+          "_label": "Web Page"
+        }
+      ],
+      "format": "text/html",
+      "access_point": [
+        {
+          "id": "http://example.org/journal/article",
+          "type": "DigitalObject"
+        }
+      ]
+    }
+  ]
+}

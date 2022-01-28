@@ -1,0 +1,99 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/53",
+  "type": "HumanMadeObject",
+  "_label": "Photograph of Example Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300128347",
+      "type": "Type",
+      "_label": "Color Photograph",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    }
+  ],
+  "part": [
+    {
+      "type": "HumanMadeObject",
+      "_label": "Front of Photograph",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300190703",
+          "type": "Type",
+          "_label": "Front Part",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300241583",
+              "type": "Type",
+              "_label": "Part Type"
+            }
+          ]
+        },
+        {
+          "id": "http://vocab.getty.edu/aat/300133025",
+          "type": "Type",
+          "_label": "Artwork"
+        }
+      ],
+      "shows": [
+        {
+          "type": "VisualItem",
+          "represents": [
+            {
+              "type": "HumanMadeObject",
+              "_label": "Example Painting",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300033618",
+                  "type": "Type",
+                  "_label": "Painting",
+                  "classified_as": [
+                    {
+                      "id": "http://vocab.getty.edu/aat/300435443",
+                      "type": "Type",
+                      "_label": "Type of Work"
+                    }
+                  ]
+                },
+                {
+                  "id": "http://vocab.getty.edu/aat/300133025",
+                  "type": "Type",
+                  "_label": "Artwork"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "HumanMadeObject",
+      "_label": "Back of Photograph",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300190692",
+          "type": "Type",
+          "_label": "Back Part",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300241583",
+              "type": "Type",
+              "_label": "Part Type"
+            }
+          ]
+        }
+      ],
+      "carries": [
+        {
+          "type": "LinguisticObject",
+          "content": "Photograph of Example Painting, taken 1932"
+        }
+      ]
+    }
+  ]
+}

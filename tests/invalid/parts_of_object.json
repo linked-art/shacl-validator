@@ -1,0 +1,14 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "v44",
+  "part" : [
+      {
+          "id": "https://linked.art/testshacl/object/part1",
+          "type": "Person",
+          "_label": "Support"
+      }
+  ]
+}

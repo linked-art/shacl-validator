@@ -1,0 +1,31 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/56",
+  "type": "HumanMadeObject",
+  "_label": "Graffiti",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "produced_by": {
+    "type": "Production",
+    "_label": "Production of Graffiti",
+    "classified_as": [
+      {
+        "id": "http://vocab.getty.edu/aat/300055299",
+        "type": "Type",
+        "_label": "Vandalism"
+      }
+    ],
+    "technique": [
+      {
+        "id": "http://vocab.getty.edu/aat/300053816",
+        "type": "Type",
+        "_label": "Spraypainting"
+      }
+    ]
+  }
+}

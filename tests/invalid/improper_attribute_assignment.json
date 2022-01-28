@@ -1,0 +1,21 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "w5,w14,w22,v39,v28,v40,v41,w53",
+  "assigned_by": [
+    {
+      "type": "Person"
+    }
+  ],
+  "member_of": {
+    "type": "AttributeAssignment",
+    "carried_out_by" : [{
+        "type" : "la:Set"
+    } ]
+  },
+  "attributed_by" : [{
+      "type" : "Person"
+  }]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/69",
+  "type": "HumanMadeObject",
+  "_label": "Frank Lloyd Wright House",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300004792",
+      "type": "Type",
+      "_label": "Building"
+    }
+  ],
+  "current_location": {
+    "type": "Place",
+    "_label": "Current Location in Arkansas at Crystal Bridges"
+  }
+}

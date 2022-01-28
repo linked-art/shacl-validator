@@ -1,0 +1,71 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/22",
+  "type": "Activity",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "Encounter",
+      "_label": "Encounter of Sculpture",
+      "took_place_at": [
+        {
+          "type": "Place",
+          "_label": "At Sea"
+        }
+      ],
+      "carried_out_by": [
+        {
+          "type": "Person",
+          "_label": "Fisher"
+        }
+      ],
+      "used_specific_object": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Fishing Net"
+        }
+      ],
+      "encountered": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Lost Sculpture",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300047090",
+              "type": "Type",
+              "_label": "Sculpture",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435443",
+                  "type": "Type",
+                  "_label": "Type of Work"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Acquisition",
+      "transferred_title_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Lost Sculpture"
+        }
+      ],
+      "transferred_title_to": [
+        {
+          "type": "Person",
+          "_label": "Fisher"
+        }
+      ]
+    }
+  ]
+}

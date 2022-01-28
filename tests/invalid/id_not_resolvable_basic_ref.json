@@ -1,0 +1,14 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/person/13",
+  "type": "Person",
+  "note": "v3,v4,v13,w27",
+  "representation": [
+    {
+      "type": "VisualItem",
+      "id" : "htps://example.com/123",
+      "_label" : "some description"
+    }
+  ]
+}
+

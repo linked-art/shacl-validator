@@ -1,0 +1,63 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/17",
+  "type": "Activity",
+  "_label": "Return of the Sculpture to Lender",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "TransferOfCustody",
+      "_label": "Return",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300438467",
+          "type": "Type",
+          "_label": "Return of Loan"
+        }
+      ],
+      "transferred_custody_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Sculpture",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300047090",
+              "type": "Type",
+              "_label": "Sculpture",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435443",
+                  "type": "Type",
+                  "_label": "Type of Work"
+                }
+              ]
+            },
+            {
+              "id": "http://vocab.getty.edu/aat/300133025",
+              "type": "Type",
+              "_label": "Artwork"
+            }
+          ]
+        }
+      ],
+      "transferred_custody_from": [
+        {
+          "type": "Person",
+          "_label": "Recipient"
+        }
+      ],
+      "transferred_custody_to": [
+        {
+          "type": "Person",
+          "_label": "Lender"
+        }
+      ]
+    }
+  ]
+}

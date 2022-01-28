@@ -1,0 +1,41 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/55",
+  "type": "HumanMadeObject",
+  "_label": "Glass Sculpture",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300047090",
+      "type": "Type",
+      "_label": "Sculpture",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "produced_by": {
+    "type": "Production",
+    "technique": [
+      {
+        "id": "http://vocab.getty.edu/aat/300053932",
+        "type": "Type",
+        "_label": "Glassblowing"
+      }
+    ],
+    "carried_out_by": [
+      {
+        "type": "Person",
+        "_label": "Glassblowing Artist"
+      }
+    ]
+  }
+}

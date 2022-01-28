@@ -1,0 +1,10 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "v3,v10,w5,w27,v61",
+  "removed_by": {
+    "type": "VisualItem"
+  }
+}

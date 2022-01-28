@@ -1,0 +1,119 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/25",
+  "type": "Activity",
+  "_label": "Commission of Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "Activity",
+      "_label": "Obligation to Pay Artist",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435599",
+          "type": "Type",
+          "_label": "Promise"
+        }
+      ],
+      "referred_to_by": [
+        {
+          "type": "LinguisticObject",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435416",
+              "type": "Type",
+              "_label": "Description",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300418049",
+                  "type": "Type",
+                  "_label": "Brief Text"
+                }
+              ]
+            }
+          ],
+          "content": "Promise to pay $1000 for a painting to be created by the artist, with 10% in advance"
+        }
+      ],
+      "carried_out_by": [
+        {
+          "type": "Person",
+          "_label": "Commissioner"
+        }
+      ],
+      "participant": [
+        {
+          "type": "Person",
+          "_label": "Artist"
+        }
+      ]
+    },
+    {
+      "type": "Activity",
+      "_label": "Obligation to Produce Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435599",
+          "type": "Type",
+          "_label": "Promise"
+        }
+      ],
+      "referred_to_by": [
+        {
+          "type": "LinguisticObject",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300435416",
+              "type": "Type",
+              "_label": "Description"
+            }
+          ],
+          "content": "Promise to paint a landscape for the commissioning party"
+        }
+      ],
+      "carried_out_by": [
+        {
+          "type": "Person",
+          "_label": "Artist"
+        }
+      ],
+      "participant": [
+        {
+          "type": "Person",
+          "_label": "Commissioner"
+        }
+      ]
+    },
+    {
+      "type": "Payment",
+      "_label": "Down Payment",
+      "paid_amount": {
+        "type": "MonetaryAmount",
+        "value": 100,
+        "currency": {
+          "id": "http://vocab.getty.edu/aat/300411994",
+          "type": "Currency",
+          "_label": "US Dollars"
+        }
+      },
+      "paid_from": [
+        {
+          "type": "Person",
+          "_label": "Commissioner"
+        }
+      ],
+      "paid_to": [
+        {
+          "type": "Person",
+          "_label": "Artist"
+        }
+      ]
+    }
+  ]
+}

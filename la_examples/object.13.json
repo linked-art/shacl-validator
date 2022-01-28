@@ -1,0 +1,63 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/13",
+  "type": "HumanMadeObject",
+  "_label": "Black and White Photograph of 'St. Sebastian'",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300128359",
+      "type": "Type",
+      "_label": "Black and White Photograph",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    }
+  ],
+  "member_of": [
+    {
+      "type": "Set",
+      "_label": "Erwin Panofsky Collection",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300025976",
+          "type": "Type",
+          "_label": "Collection"
+        }
+      ]
+    }
+  ],
+  "shows": [
+    {
+      "type": "VisualItem",
+      "_label": "Image on Photograph",
+      "represents": [
+        {
+          "type": "HumanMadeObject",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300033618",
+              "type": "Type",
+              "_label": "Painting",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435443",
+                  "type": "Type",
+                  "_label": "Type of Work"
+                }
+              ]
+            },
+            {
+              "id": "http://vocab.getty.edu/aat/300133025",
+              "type": "Type",
+              "_label": "Artwork"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

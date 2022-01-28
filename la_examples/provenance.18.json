@@ -1,0 +1,92 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/provenance/18",
+  "type": "Activity",
+  "_label": "Purchase of Painting",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300055863",
+      "type": "Type",
+      "_label": "Provenance Activity"
+    }
+  ],
+  "part": [
+    {
+      "type": "Acquisition",
+      "_label": "Acquisition of Painting",
+      "transferred_title_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Painting",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300033618",
+              "type": "Type",
+              "_label": "Painting",
+              "classified_as": [
+                {
+                  "id": "http://vocab.getty.edu/aat/300435443",
+                  "type": "Type",
+                  "_label": "Type of Work"
+                }
+              ]
+            },
+            {
+              "id": "http://vocab.getty.edu/aat/300133025",
+              "type": "Type",
+              "_label": "Artwork"
+            }
+          ]
+        }
+      ],
+      "transferred_title_from": [
+        {
+          "type": "Person",
+          "_label": "Seller"
+        }
+      ],
+      "transferred_title_to": [
+        {
+          "type": "Group",
+          "_label": "Museum",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300312281",
+              "type": "Type",
+              "_label": "Museum"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TransferOfCustody",
+      "_label": "Custody by Department",
+      "transferred_custody_of": [
+        {
+          "type": "HumanMadeObject",
+          "_label": "Painting"
+        }
+      ],
+      "transferred_custody_from": [
+        {
+          "type": "Person",
+          "_label": "Seller"
+        }
+      ],
+      "transferred_custody_to": [
+        {
+          "type": "Group",
+          "_label": "Paintings Department of Museum",
+          "classified_as": [
+            {
+              "id": "http://vocab.getty.edu/aat/300263534",
+              "type": "Type",
+              "_label": "Department"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

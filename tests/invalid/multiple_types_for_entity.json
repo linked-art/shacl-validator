@@ -1,0 +1,6 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "Person",
+  "note": "v52"
+}

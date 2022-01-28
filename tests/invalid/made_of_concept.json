@@ -1,0 +1,39 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/testshacl/object/t0",
+  "type": "HumanMadeObject",
+  "_label": "Mona Lisa",
+  "note": "v3,v8,v10,v12,v15,v48,v9",
+  "made_of": [
+    {
+      "id": "http://vocab.getty.edu/aat/400012363",
+      "type": "Material",
+      "_label": "Poplar (wood)"
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300015050",
+      "type": "Material",
+      "_label": "Oil Paint"
+    },
+    {
+      "id": "https://linked.art/aat/testterm1",
+      "type": "Material",
+      "_label": "Oil Paint",
+      "made_of" : [{
+          "type" : "Type"
+      }]
+    },
+    {
+      "id": "https://example.com/testterm1",
+      "type": "Material",
+      "_label": "Oil Paint",
+      "made_of" : [{
+          "type" : "Type"
+      }]
+    },
+    {
+      "type": "Person",
+      "_label": "Soylent Green"
+    }
+  ]
+}

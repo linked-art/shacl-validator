@@ -1,0 +1,37 @@
+{
+  "@context": "https://linked.art/ns/v1/linked-art.json",
+  "id": "https://linked.art/example/object/35",
+  "type": "HumanMadeObject",
+  "_label": "Portrait of Lord Nelson",
+  "classified_as": [
+    {
+      "id": "http://vocab.getty.edu/aat/300033618",
+      "type": "Type",
+      "_label": "Painting",
+      "classified_as": [
+        {
+          "id": "http://vocab.getty.edu/aat/300435443",
+          "type": "Type",
+          "_label": "Type of Work"
+        }
+      ]
+    },
+    {
+      "id": "http://vocab.getty.edu/aat/300133025",
+      "type": "Type",
+      "_label": "Artwork"
+    }
+  ],
+  "shows": [
+    {
+      "type": "VisualItem",
+      "about": [
+        {
+          "id": "http://vocab.getty.edu/aat/300055314",
+          "type": "Type",
+          "_label": "War"
+        }
+      ]
+    }
+  ]
+}
