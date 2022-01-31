@@ -1,17 +1,17 @@
-### The Linked Art Validator (lav)
+# The Linked Art Validator (lav)
 
-##SUMMARY
+## SUMMARY
 
-#Lav is a validator for the Linked Art (LA) 1.0 data model.  
+### Lav is a validator for the Linked Art (LA) 1.0 data model.  
 
-    * written in Java and requires a JVM >= 15
+    * written in Java and might require a JVM >= 15 (TODO: discover minimal viable Java version)
     * comes with a bash script and batch script executable for use on either Windows or linux/unix
     * can be used as a client at the command line or over the network as a service
     * the lav client returns 0 on success of all json-ld input and 1 if any inputs fail
     * validations that produce recommendations but no violations are still considered to be successful
 
 
-##INSTALLATION
+## INSTALLATION
 
     1. Ensure Java is installed and has been added to the command line search path
     2. Confirm the Java version by executing "java --version" on the command line (requires Java 15 or later)
@@ -22,76 +22,76 @@
     4. Unzip the release file to an installation directory of your choosing 
 
     5. CURRENT: Ensure the latest Apache Maven is installed and verify by running "mvn --version"
-    5. CURRENT: in the <install dir>/source/ folder, run "mvn clean install" which will copy lav-0.1.jar to the bin folder
+    5. CURRENT: in the *install dir*/source/ folder, run "mvn clean install" which will copy lav-0.1.jar to the bin folder
 
 
-    6. Navigate to <install dir>/bin and execute lav -h to ensure you receive command line help
+    6. Navigate to *install dir*/bin and execute lav -h to ensure you receive command line help
 
        Note: if you're on Linux, you might have to use ./lav if the current working directory is not already in your path
 
 
-##GETTING STARTED 
+## GETTING STARTED 
 
 Lav can be used in a variety of ways depending on your needs, so let's get familiar with the tool with a few short examples.
 
-For all examples, change to the <install dir>/bin folder 
+For all examples, change to the *install dir*/bin folder 
 
-# simple Validation of Valid JSON File [note: exit code is 0]
-lav -i ../tests/valid/basic_valid_object_0.json
+#### simple Validation of Valid JSON File [note: exit code is 0]
+*lav -i ../tests/valid/basic_valid_object_0.json*
 
-# multiple json files under a folder [note: exit code is 1]
-lav -i ../tests/invalid
+#### multiple json files under a folder [note: exit code is 1]
+*lav -i ../tests/invalid*
 
-# from STDIN (this example is for Linux - see below for Windows) 
-cat ../tests/warning/warning_object_0.json | lav 
+#### from STDIN (this example is for Linux - see below for Windows) 
+*cat ../tests/warning/warning_object_0.json | lav*
 
-# from STDIN (Windows)
-type ..\tests\warning\warning_object_0.json | lav 
+#### from STDIN (Windows)
+*type ..\tests\warning\warning_object_0.json | lav*
 
-# from a URL
-lav -i https://linked.art/example/object/0.json
+#### from a URL
+*lav -i https://linked.art/example/object/0.json*
 
 
-##LAV AS A WEB SERVICE
+## LAV AS A WEB SERVICE
 
-# Lav can be started as a web service (uses default service URL http://localhost:52525) and it will accept POST requests of JSON-LD for validation
-lav -s 
+#### Lav can be started as a web service (uses default service URL http://localhost:52525) and it will accept POST requests of JSON-LD for validation
+*lav -s*
 
-# Lav can be bound to a specific ip/hostname and port as needed
-lav -s -u http://127.0.0.1:50000
+#### Lav can be bound to a specific ip/hostname and port as needed
+*lav -s -u http://127.0.0.1:50000*
 
-# and lav can connect to its own server which makes it run a little faster when validating a bunch of data files 
-lav -u http://localhost:52525 -i ../tests/invalid
+#### and lav can connect to its own server which makes it run a little faster when validating a bunch of data files 
+*lav -u http://localhost:52525 -i ../tests/invalid*
 
-# the server is also compatible with command line tools like curl naturally
-curl -X POST -d "@../tests/valid/basic_valid_object_0.json" http://localhost:52525
+#### the server is also compatible with command line tools like curl naturally
+*curl -X POST -d "@../tests/valid/basic_valid_object_0.json" http://localhost:52525*
 
-# and the server can be stopped
-curl -k -u http://localhost:52525
+#### and the server can be stopped
+*curl -k -u http://localhost:52525*
 
 
 ## OTHER OPTIONS
 
-# set the baseline URL for differentiating between "internal" and "external" data entities
-lav -b ".*mymuseum\.org.*"
+#### set the baseline URL for differentiating between "internal" and "external" data entities
+*lav -b ".\*mymuseum\.org.\*"*
 
-# also validate input data against the linked art JSON Schema files prior to attempting SHACL shape validation
-lav -j 
+#### also validate input data against the linked art JSON Schema files prior to attempting SHACL shape validation
+*lav -j*
 
-# start the server with a secret that will also be required when shutting down the server 
-lav -s -p mySecret
+#### start the server with a secret that will also be required when shutting down the server 
+*lav -s -p mySecret*
 
-# and stop the server with that secret
-lav -k -p mySecret
+#### and stop the server with that secret
+*lav -k -p mySecret*
 
-# instead of the default linked art ontology, load this model instead
-lav --model=../ontology/myAlternateOntology.ttl
+#### instead of the default linked art ontology, load this model instead
+*lav --model=../ontology/myAlternateOntology.ttl*
 
-# instead of the default terms, load terms from here instead (can also be a directory which will be walked for TTL files)
-lav --terms=../terms/myAlternateTerms.ttl
+#### instead of the default terms, load terms from here instead (can also be a directory which will be walked for TTL files)
+*lav --terms=../terms/myAlternateTerms.ttl*
 
-# instead of the default SHACL shapes, load shapes from here instead (can also be a directory which will be walked for TTL files)
-lav --shapes=../shapes/myAlternateShapes.ttl
+#### instead of the default SHACL shapes, load shapes from here instead (can also be a directory which will be walked for TTL files)
+*lav --shapes=../shapes/myAlternateShapes.ttl*
 
 
 ## OUTPUT
@@ -100,13 +100,13 @@ Lav outputs detailed validation results to STDOUT when operating as a client.
 
 As a web service, lav responds with HTTP 422 UNPROCESSABLE ENTITY for Violations and 200 OK for success and warnings/recommendations.
 
-# lav can also operating (mostly) quietly to suppress considerable output
-lav -q 
+#### lav can also operating (mostly) quietly to suppress considerable output
+*lav -q*
 
-# when there are validation errors, an RDF representation of the data being validated is provided by default to aid in diagnostics, but this can be disabled with
-lav -g false
+#### when there are validation errors, an RDF representation of the data being validated is provided by default to aid in diagnostics, but this can be disabled with
+*lav -g false*
 
-# there is a log4j.properties file in <install dir>/conf that can be edited and applied to both the client and server's logging to further control their output
+#### there is a log4j.properties file in *install dir*/conf that can be edited and applied to both the client and server's logging to further control their output
 
 
 
