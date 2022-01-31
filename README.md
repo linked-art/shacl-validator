@@ -13,19 +13,13 @@
 
 ## INSTALLATION
 
-    1. Ensure Java is installed and has been added to the command line search path
-    2. Confirm the Java version by executing "java --version" on the command line (requires Java 15 or later)
-
-    3. CURRENT: Download the project zip file from GitHub ( https://github.com/linked-art/shacl-validator/archive/refs/heads/main.zip )
-    3. FUTURE : Download the latest lav release package from GitHub ( https://github.com/linked.art/shacl-validator/releases )
-
-    4. Unzip the release file to an installation directory of your choosing 
-
-    5. CURRENT: Ensure the latest Apache Maven is installed and verify by running "mvn --version"
-    5. CURRENT: in the *install dir*/source/ folder, run "mvn clean install" which will copy lav-0.1.jar to the bin folder
-
-
-    6. Navigate to *install dir*/bin and execute lav -h to ensure you receive command line help
+    1. Ensure a Java JDK is installed and has been added to the command line search path
+    2. Confirm the Java version by executing "java --version" on the command line (requires Java 8 or later)
+    3. Ensure the latest Apache Maven is installed and verify this by running "mvn --version"
+    4. Download the latest lav release (.zip file) from GitHub ( https://github.com/linked-art/shacl-validator/releases )
+    5. Unzip the release file to an installation directory of your choosing 
+    6. In the *install dir*/source/ folder, run "mvn clean install" which will compile, test, and install lav-0.1.jar to the *install dir*/bin folder
+    7. Navigate to *install dir*/bin and execute lav -h to ensure you receive command line help
 
        Note: if you're on Linux, you might have to use ./lav if the current working directory is not already in your path
 
