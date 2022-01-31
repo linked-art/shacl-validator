@@ -7,9 +7,8 @@
 * @version     0.1
 * @since       0.1
 */
-package art.linked.shacl;
 
-import static org.junit.Assert.assertTrue;
+package art.linked.shacl;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -36,10 +35,14 @@ import org.topbraid.shacl.validation.ValidationReport;
 import org.topbraid.shacl.validation.ValidationResult;
 
 import static art.linked.shacl.Validator.*;
+import static org.junit.Assert.assertTrue;
 
-public class Tests {
+import picocli.CommandLine;
+
+
+public class ValidatorTest {
     
-    private static final Logger log = LoggerFactory.getLogger(Tests.class);
+    private static final Logger log = LoggerFactory.getLogger(ValidatorTest.class);
     
     static boolean isExpectedValidationError(ValidationResult e, Map<String,String> testCoverage) {
 
@@ -162,11 +165,16 @@ public class Tests {
     
     @Test
     public void testAllSHACLConstraints() throws IOException, InterruptedException {
+        
+        // create a Validator object to ensure the pico command line processing occurs
+        // since we rely on the default values assigned by Pico for our tests
+        CommandLine cmd = new CommandLine(new Validator());
+        cmd.parseArgs(new String[0]);
 
         log.info("Testing SHACL shapes against junit test data");
 
         OntModel ontologyModel = loadOntology(newOntModel(), ontologyModelFile);
-        OntModel shapesModel = loadShapes(newOntModel(), shapesFileOrFolder);
+        OntModel shapesModel = loadShapes(newOntModel(), shapesFileOrFolder );
         OntModel baseDataModel = loadData(newOntModel(), pathTo(INSTALLDIR,"tests/valid/") );
 
         // load the base data which should validate, and confirm it validates first
